@@ -8,7 +8,7 @@
 # Terje Uriansrud <ter@operamail.com>, 2007
 msgid ""
 msgstr ""
-"Project-Id-Version: Libxfce4util\n"
+"Project-Id-Version: Libbladeutil\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-02 22:35+0200\n"
 "PO-Revision-Date: 2019-07-24 05:58+0000\n"
