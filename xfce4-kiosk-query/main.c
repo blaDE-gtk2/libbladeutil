@@ -30,7 +30,7 @@
 #include <unistd.h>
 #endif
 
-#include <libxfce4util/libxfce4util.h>
+#include <libbladeutil/libbladeutil.h>
 
 
 G_GNUC_NORETURN static void

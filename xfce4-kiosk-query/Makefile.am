@@ -1,4 +1,5 @@
 AM_CPPFLAGS =								\
+	-DGLIB_DISABLE_DEPRECATION_WARNINGS \
 	-I$(top_builddir)						\
 	-I$(top_srcdir)
 
@@ -12,7 +13,7 @@ xfce4_kiosk_query_CFLAGS =						\
 	$(GLIB_CFLAGS)
 
 xfce4_kiosk_query_DEPENDENCIES =					\
-	$(top_builddir)/libxfce4util/libxfce4util.la
+	$(top_builddir)/libbladeutil/libbladeutil.la
 
 xfce4_kiosk_query_LDFLAGS =						\
-	$(top_builddir)/libxfce4util/libxfce4util.la
+	$(top_builddir)/libbladeutil/libbladeutil.la

@@ -3,7 +3,7 @@
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 SUBDIRS =								\
-	libxfce4util							\
+	libbladeutil							\
 	docs								\
 	po								\
 	xfce4-kiosk-query

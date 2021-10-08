@@ -111,7 +111,7 @@
 - Fixed incorrect assertion in xfce_strjoin (bug #7122).
 - Fix "empty declaration" compiler warnings.
 - Update FSF address and add missing licenses.
-- Fix undef in libxfce4util.h header.
+- Fix undef in libbladeutil.h header.
 - Remove the internal slice allocator macros.
 - Use chain to free slice instead of a loop.
 - Translation updates (ko, ru, sk, zh_CN, nl).
@@ -146,7 +146,7 @@
 =====
 - Optimize xfce_rc_read_bool_entry().
 - Optimize strcmp in xfce-rc-simple.
-- Fix broken translations in applications using libxfce4util (bug #5842).
+- Fix broken translations in applications using libbladeutil (bug #5842).
 - Deprecate XfceDesktopEntry.
 - Translation updates (ru, cs, lv, fi, eu, de, bn, de, uk, si, kk,
   pa, gl, zh_TW, sk, ug, fr, id, it).
@@ -245,7 +245,7 @@
 
 4.1.6
 =====
-- Added LIBXFCE4UTIL_*_VERSION macros.
+- Added LIBBLADEUTIL_*_VERSION macros.
 
 
 4.1.5
@@ -260,7 +260,7 @@
 =====
 - Several bugfixes
 - Added --with-broken-putenv=[auto/no/yes] to configure to make
-  libxfce4util cross-compilable again.
+  libbladeutil cross-compilable again.
 
 
 4.1.3

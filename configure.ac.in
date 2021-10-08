@@ -10,14 +10,14 @@ dnl
 dnl ***************************
 dnl *** Version information ***
 dnl ***************************
-m4_define([libxfce4util_verinfo], [7:0:0])
-m4_define([libxfce4util_version_major], [4])
-m4_define([libxfce4util_version_minor], [14])
-m4_define([libxfce4util_version_micro], [0])
-m4_define([libxfce4util_version_nano], [])   dnl leave this empty to have no nano version
-m4_define([libxfce4util_version_build], [@REVISION@])
-m4_define([libxfce4util_version_tag], [])
-m4_define([libxfce4util_version], [libxfce4util_version_major().libxfce4util_version_minor().libxfce4util_version_micro()ifelse(libxfce4util_version_nano(), [], [], [.libxfce4util_version_nano()])ifelse(libxfce4util_version_tag(), [git], [libxfce4util_version_tag()-libxfce4util_version_build()], [])])
+m4_define([libbladeutil_verinfo], [7:0:0])
+m4_define([libbladeutil_version_major], [4])
+m4_define([libbladeutil_version_minor], [14])
+m4_define([libbladeutil_version_micro], [0])
+m4_define([libbladeutil_version_nano], [])   dnl leave this empty to have no nano version
+m4_define([libbladeutil_version_build], [@REVISION@])
+m4_define([libbladeutil_version_tag], [])
+m4_define([libbladeutil_version], [libbladeutil_version_major().libbladeutil_version_minor().libbladeutil_version_micro()ifelse(libbladeutil_version_nano(), [], [], [.libbladeutil_version_nano()])ifelse(libbladeutil_version_tag(), [git], [libbladeutil_version_tag()-libbladeutil_version_build()], [])])
 
 dnl **************************************************************
 dnl *** Overall Xfce version, modify this when making releases ***
@@ -32,21 +32,21 @@ dnl # YOU ARE DOING.
 dnl ********************************************
 dnl *** Full debug support for GIT snapshots ***
 dnl ********************************************
-m4_define([libxfce4util_debug_default], [ifelse(libxfce4util_version_tag(), [git], [yes], [minimum])])
+m4_define([libbladeutil_debug_default], [ifelse(libbladeutil_version_tag(), [git], [yes], [minimum])])
 
 dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
 AC_COPYRIGHT([Copyright (c) 2002-2019
         The Xfce development team. All rights reserved.])
-AC_INIT([libxfce4util], [libxfce4util_version], [xfce4-dev@xfce.org])
+AC_INIT([libbladeutil], [libbladeutil_version], [xfce4-dev@xfce.org])
 AC_PREREQ([2.50])
-AC_REVISION([libxfce4util_version_build])
+AC_REVISION([libbladeutil_version_build])
 
 dnl ***************************
 dnl *** Initialize automake ***
 dnl ***************************
-LIBXFCE4UTIL_VERSION=libxfce4util_version()
+LIBBLADEUTIL_VERSION=libbladeutil_version()
 AM_INIT_AUTOMAKE([1.8 dist-bzip2 tar-ustar no-dist-gzip])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIRS([m4])
@@ -56,8 +56,8 @@ m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 dnl **************************
 dnl *** Libtool versioning ***
 dnl **************************
-LIBXFCE4UTIL_VERINFO=libxfce4util_verinfo()
-AC_SUBST([LIBXFCE4UTIL_VERINFO])
+LIBBLADEUTIL_VERINFO=libbladeutil_verinfo()
+AC_SUBST([LIBBLADEUTIL_VERINFO])
 
 dnl **********************************
 dnl *** Subst overall Xfce version ***
@@ -66,14 +66,14 @@ AC_DEFINE([XFCE_VERSION_STRING], ["xfce_version_string"],
   [Overall Xfce version])
 
 dnl **********************************
-dnl *** Subst libxfce4util version ***
+dnl *** Subst libbladeutil version ***
 dnl **********************************
-LIBXFCE4UTIL_VERSION_MAJOR=libxfce4util_version_major()
-LIBXFCE4UTIL_VERSION_MINOR=libxfce4util_version_minor()
-LIBXFCE4UTIL_VERSION_MICRO=libxfce4util_version_micro()
-AC_SUBST([LIBXFCE4UTIL_VERSION_MAJOR])
-AC_SUBST([LIBXFCE4UTIL_VERSION_MINOR])
-AC_SUBST([LIBXFCE4UTIL_VERSION_MICRO])
+LIBBLADEUTIL_VERSION_MAJOR=libbladeutil_version_major()
+LIBBLADEUTIL_VERSION_MINOR=libbladeutil_version_minor()
+LIBBLADEUTIL_VERSION_MICRO=libbladeutil_version_micro()
+AC_SUBST([LIBBLADEUTIL_VERSION_MAJOR])
+AC_SUBST([LIBBLADEUTIL_VERSION_MINOR])
+AC_SUBST([LIBBLADEUTIL_VERSION_MICRO])
 
 dnl *******************************
 dnl *** Check for UNIX variants ***
@@ -139,7 +139,7 @@ VAPIGEN_CHECK()
 dnl ***********************************
 dnl *** Check for debugging support ***
 dnl ***********************************
-XDT_FEATURE_DEBUG([libxfce4util_debug_default])
+XDT_FEATURE_DEBUG([libbladeutil_debug_default])
 
 dnl **************************************
 dnl *** Check for linker optimizations ***
@@ -151,7 +151,7 @@ dnl *** Check for ELF visibility support  ***
 dnl *****************************************
 dnl *** Do not replace with the Xdt macro ***
 dnl *** because it cannot cope with the   ***
-dnl *** libxfce4util_*_version variables  ***
+dnl *** libbladeutil_*_version variables  ***
 dnl *****************************************
 AC_ARG_ENABLE([visibility], AC_HELP_STRING([--disable-visibility], [Do not use ELF visibility attributes]), [], [enable_visibility=yes])
 have_gnuc_visibility=no
@@ -191,9 +191,9 @@ AC_OUTPUT([
 Makefile
 docs/version.xml
 docs/Makefile
-libxfce4util/libxfce4util-1.0.pc
-libxfce4util/libxfce4util-config.h
-libxfce4util/Makefile
+libbladeutil/libbladeutil-1.0.pc
+libbladeutil/libbladeutil-config.h
+libbladeutil/Makefile
 po/Makefile.in
 xfce4-kiosk-query/Makefile
 ])
